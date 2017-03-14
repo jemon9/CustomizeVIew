@@ -3,7 +3,6 @@ package imageloader.zzf.com.viewlib;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.ViewGroup;
@@ -14,6 +13,7 @@ import android.widget.LinearLayout;
 import java.util.List;
 
 /**
+ * 将轮播器和需要的圆点布局加载到该布局中
  * Created by Heyha on 2017/3/14.
  */
 

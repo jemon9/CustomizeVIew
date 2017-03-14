@@ -3,9 +3,8 @@ package com.example.heyha.customizeview.activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,6 +15,9 @@ import java.util.List;
 
 import imageloader.zzf.com.viewlib.ImageLoopFrameLayout;
 
+/**
+ * 测试轮播视图功能
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ImageLoopFrameLayout viewGroup;
@@ -38,25 +40,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewGroup = (ImageLoopFrameLayout) findViewById(R.id.image_group);
         viewGroup.setImageLoopFrameLayoutClickListener(listener);
-
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int width = dm.widthPixels;
-
         List<Bitmap> bitmaps = new ArrayList<>();
         for (int i = 0; i < ids.length; i++){
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(),ids[i]);
             bitmaps.add(bitmap);
         }
         viewGroup.addBitmaps(bitmaps);
-
-//        for (int i = 0; i < ids.length; i++){
-//            ImageView imageView = new ImageView(this);
-//            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//            imageView.setLayoutParams(new ViewGroup.LayoutParams(width, ViewGroup.LayoutParams.WRAP_CONTENT));
-//            imageView.setImageResource(ids[i]);
-//            viewGroup.addView(imageView);
-//        }
     }
 
 
@@ -70,6 +59,6 @@ public class MainActivity extends AppCompatActivity {
             default:
                 break;
         }
-//        startActivity(intent);
+        startActivity(intent);
     }
 }

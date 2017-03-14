@@ -7,9 +7,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context="com.example.heyha.customizeview.activity.ThirdActivity">
-    <com.example.heyha.customizeview.ui.ScrollZoomListView
+    <imageloader.zzf.com.viewlib.ScrollZoomListView
             android:id="@+id/scroll_zoom_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    </com.example.heyha.customizeview.ui.ScrollZoomListView>
+    </imageloader.zzf.com.viewlib.ScrollZoomListView>
 </LinearLayout>
