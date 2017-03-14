@@ -1,4 +1,4 @@
-package com.example.heyha.customizeview.ui;
+package imageloader.zzf.com.viewlib;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,7 +8,6 @@ import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ImageView;
 import android.widget.ListView;
-import com.example.heyha.customizeview.R;
 
 /**
  * 头部带图片的ListView，图片可以放大缩小

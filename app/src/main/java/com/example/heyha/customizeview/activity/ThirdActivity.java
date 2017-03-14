@@ -6,7 +6,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import com.example.heyha.customizeview.R;
-import com.example.heyha.customizeview.ui.ScrollZoomListView;
+
+import imageloader.zzf.com.viewlib.ScrollZoomListView;
 
 public class ThirdActivity extends AppCompatActivity {
 

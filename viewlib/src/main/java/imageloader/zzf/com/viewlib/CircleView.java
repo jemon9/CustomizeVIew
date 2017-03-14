@@ -1,4 +1,4 @@
-package com.example.heyha.customizeview.ui;
+package imageloader.zzf.com.viewlib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-import com.example.heyha.customizeview.R;
 
 /**
  * Created by Heyha on 2017/2/24.
