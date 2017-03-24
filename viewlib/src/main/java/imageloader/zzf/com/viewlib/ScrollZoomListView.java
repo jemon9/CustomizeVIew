@@ -27,6 +27,7 @@ public class ScrollZoomListView extends ListView {
         headerHeight = context.getResources().getDimensionPixelSize(R.dimen.header_height_default);
     }
 
+
     @Override
     protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX, int scrollRangeY,
                                    int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent) {

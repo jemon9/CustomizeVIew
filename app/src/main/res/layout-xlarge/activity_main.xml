@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="com.example.heyha.customizeview.activity.MainActivity">
+
+    <imageloader.zzf.com.viewlib.ImageLoopFrameLayout
+        android:id="@+id/image_group"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </imageloader.zzf.com.viewlib.ImageLoopFrameLayout>
+
+
+    <Button
+        android:text="自定义视图"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp" android:id="@+id/customize_view"
+        style="@android:style/Widget.Button" android:onClick="toCustomizeView"
+        android:layout_below="@+id/image_group"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:text="Button"
+        android:layout_alignBaseline="@+id/customize_view"
+        android:layout_alignBottom="@+id/customize_view"
+        android:layout_toEndOf="@+id/customize_view"/>
+</RelativeLayout>

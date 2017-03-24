@@ -18,8 +18,7 @@ import java.util.TimerTask;
  * 1、手动轮播功能：onMeasure(),onLayout(),onInterceptTouchEvent(),onTouchEvent(),smoothScrollBy(),computeScroll()
  * 2、自动轮播功能：Timer，TimerTask，Handler，
  * 3、图片的点击事件：LoopViewClickListener，监听传递this-->ImageLoopFramelayout-->used
- * 4、底部轮播圆点布局：
- * 5、底部圆点切换过程:
+ * 4、底部轮播圆点布局及切换：
  * Created by Heyha on 2017/3/14.
  */
 
@@ -198,7 +197,7 @@ public class LoopViewGroup extends ViewGroup {
     /**
      * 1、利用Scroller对象实现手动轮播
      * <p>
-     * 第一、我们在滑动图片的过程中，其实就是我们自定义ViewGroup滑动子试图的移动过程，那么只需要知道滑动之前的横坐标和滑动之后的横坐标
+     * 第一：我们在滑动图片的过程中，其实就是我们自定义ViewGroup滑动子试图的移动过程，那么只需要知道滑动之前的横坐标和滑动之后的横坐标
      * ，此时可以求得此次移动过程的距离，我们再利用scrollBy方法实现图片的滑动，所以，有两个值需要知道，滑动前的横坐标和滑动后的横坐标；
      * <p>
      * 第二：我们在第一次按下的一瞬间，此时的移动之前的横坐标和移动之后的横坐标是相等的，也就是我们按下的那一点的横坐标；
@@ -217,7 +216,7 @@ public class LoopViewGroup extends ViewGroup {
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getAction();
         switch (action) {
-            case MotionEvent.ACTION_DOWN:
+            case MotionEvent.ACTION_DOWN:  //按下的一瞬间
                 isClick = true;
                 if (!mScroller.isFinished()) {  //如果滑动还未停止，又发生了点击事件，则停止之前的滑动，重新开始
                     mScroller.abortAnimation();

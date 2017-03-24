@@ -11,7 +11,9 @@ import android.widget.Toast;
 import com.example.heyha.customizeview.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import imageloader.zzf.com.viewlib.ImageLoopFrameLayout;
 
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             bitmaps.add(bitmap);
         }
         viewGroup.addBitmaps(bitmaps);
+
+        HashMap<String,Integer> hashMap = new HashMap<>();
+        Map<Integer,String> map = new HashMap<>();
     }
 
 
