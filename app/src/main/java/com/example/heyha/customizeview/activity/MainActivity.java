@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageLoopFrameLayout.ImageLoopFrameLayoutListener listener = new ImageLoopFrameLayout.ImageLoopFrameLayoutListener() {
         @Override
         public void clickImageIndex(int index) {
-            Toast.makeText(getApplicationContext(),"pos:" + index,Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "pos:" + index, Toast.LENGTH_LONG).show();
         }
     };
 
@@ -43,24 +43,25 @@ public class MainActivity extends AppCompatActivity {
         viewGroup = (ImageLoopFrameLayout) findViewById(R.id.image_group);
         viewGroup.setImageLoopFrameLayoutClickListener(listener);
         List<Bitmap> bitmaps = new ArrayList<>();
-        for (int i = 0; i < ids.length; i++){
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(),ids[i]);
+        for (int i = 0; i < ids.length; i++) {
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), ids[i]);
             bitmaps.add(bitmap);
         }
         viewGroup.addBitmaps(bitmaps);
 
-        HashMap<String,Integer> hashMap = new HashMap<>();
-        Map<Integer,String> map = new HashMap<>();
+        HashMap<String, Integer> hashMap = new HashMap<>();
+        Map<Integer, String> map = new HashMap<>();
     }
-
 
 
     public void toCustomizeView(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
             case R.id.customize_view:
-                intent.setClass(this,SecActivity.class);
+                intent.setClass(this, SecActivity.class);
                 break;
+            case R.id.photo_view:
+                intent.setClass(this, PhotoViewActivity.class);
             default:
                 break;
         }

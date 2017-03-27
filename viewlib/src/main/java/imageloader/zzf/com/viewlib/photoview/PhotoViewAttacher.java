@@ -388,7 +388,7 @@ public class PhotoViewAttacher implements View.OnTouchListener, View.OnLayoutCha
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            doFling(e1, e2, velocityX, velocityY);
+            doFling(e1, e2, -velocityX, -velocityY);
             return false;
         }
 
